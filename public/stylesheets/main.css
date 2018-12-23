@@ -25,6 +25,35 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
-.glyphicon {
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+	.glyphicon {
     font-size: 20px;
+	}
+	.alert {
+    font-size: 16px;
+	}
 }
+
+@media only screen and (max-width: 767px) {
+	  /* phones */
+	.glyphicon {
+    font-size: 40px;
+	}
+	.alert {
+    font-size: 60px;
+	}
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+	.glyphicon {
+    font-size: 30px;
+	}
+	.alert {
+    font-size: 50px;
+	}
+}
+
+
