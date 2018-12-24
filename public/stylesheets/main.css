@@ -45,10 +45,10 @@
 @media only screen and (max-width: 1300px) {
 	  /* phones */
 	.glyphicon {
-    font-size: 40px;
+    font-size: 35px;
 	}
 	.alert {
-    font-size: 30px;
+    font-size: 20px;
 		background: #9a9;
 	}
 }
@@ -56,10 +56,10 @@
 @media only screen and (max-width: 1300px) and (orientation: portrait) {
     /* portrait phones */
 	.glyphicon {
-    font-size: 40px;
+    font-size: 50px;
 	}
 	.alert {
-    font-size: 25px;
+    font-size: 40px;
 		background: #99a;
 	}
 }
