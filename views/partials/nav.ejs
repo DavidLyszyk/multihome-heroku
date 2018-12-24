@@ -2,20 +2,27 @@
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+        <a href="/"><span class="glyphicon glyphicon-home toolbar"></span> Home</a>
       </li>
       <li>
-        <a href="/tiles"><span class="glyphicon glyphicon-th-large"></span></a>
+        <a href="/tiles"><span class="glyphicon glyphicon-th-large toolbar"></span></a>
       </li>
       <li>
-        <a href="/list"><span class="glyphicon glyphicon-th-list"></span></a>
+        <a href="/list"><span class="glyphicon glyphicon-th-list toolbar"></span></a>
       </li>
       <li>
-        <a href="/timers"><span class="glyphicon glyphicon-time"></span></a>
+        <a href="/timers"><span class="glyphicon glyphicon-time toolbar"></span></a>
       </li>
       <li>
-        <a href="/events"><span class="glyphicon glyphicon-dashboard"></span></a>
+        <a href="/events"><span class="glyphicon glyphicon-dashboard toolbar"></span></a>
       </li>	
 		</ul>
   </div>
 </nav>
+
+<script>
+$(".nav .nav-link").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).addClass("active");
+});
+</script>
