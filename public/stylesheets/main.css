@@ -25,6 +25,11 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }*/
 
+.toolbar {
+	margin: 0px 0px;
+	padding: 10px;
+	/*border: 1px solid white;*/
+}
 
 @media only screen and (min-width: 1301px) {
     /* tablets and desktop */
@@ -43,7 +48,7 @@
     font-size: 40px;
 	}
 	.alert {
-    font-size: 60px;
+    font-size: 30px;
 		background: #9a9;
 	}
 }
@@ -51,10 +56,10 @@
 @media only screen and (max-width: 1300px) and (orientation: portrait) {
     /* portrait phones */
 	.glyphicon {
-    font-size: 30px;
+    font-size: 40px;
 	}
 	.alert {
-    font-size: 50px;
+    font-size: 25px;
 		background: #99a;
 	}
 }
