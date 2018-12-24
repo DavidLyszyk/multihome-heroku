@@ -26,7 +26,7 @@
       max-width: 100%; }*/
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1301px) {
     /* tablets and desktop */
 	.glyphicon {
     font-size: 20px;
@@ -37,7 +37,7 @@
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1300px) {
 	  /* phones */
 	.glyphicon {
     font-size: 40px;
@@ -48,7 +48,7 @@
 	}
 }
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+@media only screen and (max-width: 1300px) and (orientation: portrait) {
     /* portrait phones */
 	.glyphicon {
     font-size: 30px;
