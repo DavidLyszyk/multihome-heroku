@@ -1,4 +1,4 @@
-.jumbotron {
+/*.jumbotron {
   background: #532F8C;
   color: white;
   padding-bottom: 80px; }
@@ -23,7 +23,7 @@
     margin: auto;
     border: 2px solid white; }
     .jumbotron .lang-logo img {
-      max-width: 100%; }
+      max-width: 100%; }*/
 
 
 @media only screen and (min-width: 768px) {
@@ -33,6 +33,7 @@
 	}
 	.alert {
     font-size: 16px;
+		background: #b99;
 	}
 }
 
@@ -43,6 +44,7 @@
 	}
 	.alert {
     font-size: 60px;
+		background: #9a9;
 	}
 }
 
@@ -53,6 +55,7 @@
 	}
 	.alert {
     font-size: 50px;
+		background: #99a;
 	}
 }
 
