@@ -65,8 +65,8 @@ function compute_layout() {
 	const max_width = 400;
 	const sec_width = 50;
 	const hmargin = 10;
-	const hsep1 = 10;
-	const hsep2 = 5;
+	const hsep1 = 20;
+	const hsep2 = 10;
 	const hpadding = 10;
 
 	const block_part_width = 2*hsep1 + sec_width + hsep2;
@@ -76,7 +76,7 @@ function compute_layout() {
 	var i;
 	var screen_width = 0;
 	for (i = 0; i < 10; i++) {
-		screen_width = $( window ).width()*0.98;
+		screen_width = $( window ).width()*0.95;
 	}
 	
 	var w1 = (screen_width - hmargin * 2 - N * block_part_width) / N;
@@ -111,6 +111,7 @@ function compute_layout() {
 
 function onDeviceMouseMove(element, event) {
 	//alert(element.id);
+	event.preventDefault();
 	element.innerHTML = "mouse : " + event.offsetX + " ; " + event.offsetY;
 }
 
