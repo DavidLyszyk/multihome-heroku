@@ -15,6 +15,9 @@
     font-size: 16px;
 		background: #b99;
 	}
+	.device {
+		font-size: 15x;
+	}
 }
 
 @media only screen and (max-width: 1300px) {
@@ -23,11 +26,14 @@
     font-size: 35px;
 	}
 	.toolbar-nav {
-		font-size: 30px;
+		font-size: 0px;
 	}
 	.alert {
     font-size: 20px;
 		background: #9a9;
+	}
+	.device {
+		font-size: 30px;
 	}
 }
 
@@ -37,11 +43,14 @@
     font-size: 50px;
 	}
 	.toolbar-nav {
-		font-size: 40px;
+		font-size: 0px;
 	}
 	.alert {
     font-size: 40px;
 		background: #99a;
+	}
+	.device {
+		font-size: 30px;
 	}
 }
 
@@ -53,7 +62,6 @@
 	background: #aab;
 	/*margin: 10px;*/
 	padding: 10px;
-	font-size: 12px;
 	font-weight: bold;
 }
 

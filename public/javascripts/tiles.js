@@ -61,6 +61,15 @@ function create_tiles() {
 
 function compute_layout() {
 
+	var i;
+	var screen_width = 0, screen_height = 0;
+	for (i = 0; i < 10; i++) {
+		screen_width = $( window ).width()*0.95;
+		screen_height = $( window ).height()*0.95;
+	}
+	var portrait = (screen_width < screen_height);
+	//if (portrait)		alert("portrait!");
+	
 	const min_width = 200;
 	const max_width = 400;
 	const sec_width = 50;
@@ -72,23 +81,14 @@ function compute_layout() {
 	const block_part_width = 2*hsep1 + sec_width + hsep2;
 	
 	var N = devices.length;
-
-	var i;
-	var screen_width = 0, screen_height = 0;
-	for (i = 0; i < 10; i++) {
-		screen_width = $( window ).width()*0.95;
-		screen_height = $( window ).height()*0.95;
-	}
-	
-	if (screen_width < screen_height) {
-		alert("portrait!");
-	}
 	
 	var w1 = (screen_width - hmargin * 2 - N * block_part_width) / N;
 	if (w1 < min_width)	w1 = min_width;
 	if (w1 > max_width)	w1 = max_width;
 	console.log("screen_width = " + screen_width + " ; w1 = " + w1);
+	
 	var N2 = ~~((screen_width - hmargin * 2) / (w1 + block_part_width));
+	if (portrait)		N2 = 2;
 	var w2 = (screen_width - hmargin * 2 - N2 * block_part_width) / N2;
 	console.log("N2 = " + N2 + " ; w2 = " + w2);
 	
