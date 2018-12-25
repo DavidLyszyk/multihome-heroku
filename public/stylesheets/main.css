@@ -2,6 +2,9 @@
 .toolbar {
 	padding: 10px;
 }
+.glyphicon-bitcoin {
+	color: transparent;
+}
 
 @media only screen and (min-width: 1301px) {
     /* tablets and desktop */
@@ -10,6 +13,10 @@
 	}
 	.toolbar-nav {
 		font-size: 20px;
+	}
+	.toolbar-title {
+		font-size: 20px;
+		font-weight: bold;
 	}
 	.alert {
     font-size: 16px;
@@ -28,6 +35,10 @@
 	.toolbar-nav {
 		font-size: 0px;
 	}
+	.toolbar-title {
+		font-size: 20px;
+		font-weight: bold;
+	}
 	.alert {
     font-size: 20px;
 		background: #9a9;
@@ -45,6 +56,10 @@
 	.toolbar-nav {
 		font-size: 0px;
 	}
+	.toolbar-title {
+		font-size: 20px;
+		font-weight: bold;
+	}
 	.alert {
     font-size: 40px;
 		background: #99a;
@@ -55,32 +70,26 @@
 }
 
 .device {
-	width: 100px;
-	height: 100px;
 	border: 2px solid black;
 	border-radius: 5px;
 	background: #aab;
-	/*margin: 10px;*/
 	padding: 10px;
 	font-weight: bold;
 }
 
 .dev-details {
-	width: 30px;
-	height: 49px;
 	background: #aba;
 	border: 2px solid black;
 	border-radius: 5px;
 }
 
 .dev-timers {
-	width: 30px;
-	height: 49px;
 	background: #baa;
 	border: 2px solid black;
 	border-radius: 5px;
 }
 
+.gi-15x{font-size: 1.5em;}
 .gi-2x{font-size: 2em;}
 .gi-3x{font-size: 3em;}
 .gi-4x{font-size: 4em;}

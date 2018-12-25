@@ -72,11 +72,13 @@ function compute_layout() {
 	
 	const min_width = 200;
 	const max_width = 400;
-	const sec_width = 50;
+	const height1 = portrait ? 400 : 150;
+	const sec_width = 60;
 	const hmargin = 10;
-	const hsep1 = 20;
-	const hsep2 = 10;
+	const hsep1 = portrait ? 40 : 20;
+	const hsep2 = portrait ? 20 : 10;
 	const hpadding = 10;
+	const height2 = (height1 - hsep2 + hmargin*2)/2;
 
 	const block_part_width = 2*hsep1 + sec_width + hsep2;
 	
@@ -88,7 +90,9 @@ function compute_layout() {
 	console.log("screen_width = " + screen_width + " ; w1 = " + w1);
 	
 	var N2 = ~~((screen_width - hmargin * 2) / (w1 + block_part_width));
-	if (portrait)		N2 = 2;
+	if (portrait) {
+		N2 = 2;
+	}
 	var w2 = (screen_width - hmargin * 2 - N2 * block_part_width) / N2;
 	console.log("N2 = " + N2 + " ; w2 = " + w2);
 	
@@ -98,18 +102,21 @@ function compute_layout() {
 	devices.forEach(function(item, index) {
 		var device_tile = $("#device" + (index+1));
 		device_tile.width(w2 - hsep1 - hpadding);
+		device_tile.height(height1);
 		device_tile.offset( { left: pleft, top: ptop });
 		var device_details = $("#dev-details" + (index+1));
 		device_details.width(sec_width);
-		pleft = pleft + w2 + hsep2;
+		device_details.height(height2);
+		pleft = pleft + w2 + hsep2/2;
 		device_details.offset( { left: pleft, top: ptop} );
 		var device_timers = $("#dev-timers" + (index+1));
 		device_timers.width(sec_width);
-		device_timers.offset( { left: pleft, top: ptop + 51} );
+		device_timers.height(height2);
+		device_timers.offset( { left: pleft, top: ptop + height2 + hsep2} );
 		pleft = pleft + hsep1*3 + sec_width;
 		if ((index+1) % N2 == 0) {
 			pleft = hmargin;
-			ptop = ptop + hmargin + 100;
+			ptop = ptop + hmargin*3 + height1;
 		}
 	});
 }
