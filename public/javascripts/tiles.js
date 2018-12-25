@@ -74,9 +74,14 @@ function compute_layout() {
 	var N = devices.length;
 
 	var i;
-	var screen_width = 0;
+	var screen_width = 0, screen_height = 0;
 	for (i = 0; i < 10; i++) {
 		screen_width = $( window ).width()*0.95;
+		screen_height = $( window ).height()*0.95;
+	}
+	
+	if (screen_width < screen_height) {
+		alert("portrait!");
 	}
 	
 	var w1 = (screen_width - hmargin * 2 - N * block_part_width) / N;
