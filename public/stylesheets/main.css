@@ -1,40 +1,15 @@
-/*.jumbotron {
-  background: #532F8C;
-  color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }*/
 
 .toolbar {
-	margin: 0px 0px;
 	padding: 10px;
-	/*border: 1px solid white;*/
 }
 
 @media only screen and (min-width: 1301px) {
     /* tablets and desktop */
 	.glyphicon {
-    font-size: 20px;
+    font-size: 18px;
+	}
+	.toolbar-nav {
+		font-size: 20px;
 	}
 	.alert {
     font-size: 16px;
@@ -47,6 +22,9 @@
 	.glyphicon {
     font-size: 35px;
 	}
+	.toolbar-nav {
+		font-size: 30px;
+	}
 	.alert {
     font-size: 20px;
 		background: #9a9;
@@ -58,10 +36,46 @@
 	.glyphicon {
     font-size: 50px;
 	}
+	.toolbar-nav {
+		font-size: 40px;
+	}
 	.alert {
     font-size: 40px;
 		background: #99a;
 	}
 }
+
+.device {
+	width: 100px;
+	height: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background: #aab;
+	/*margin: 10px;*/
+	padding: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.dev-details {
+	width: 30px;
+	height: 49px;
+	background: #aba;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.dev-timers {
+	width: 30px;
+	height: 49px;
+	background: #baa;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.gi-2x{font-size: 2em;}
+.gi-3x{font-size: 3em;}
+.gi-4x{font-size: 4em;}
+.gi-5x{font-size: 5em;}
 
 

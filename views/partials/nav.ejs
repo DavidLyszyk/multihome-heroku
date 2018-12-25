@@ -1,28 +1,37 @@
 <nav class="navbar navbar-default navbar-static-top navbar-inverse">
   <div class="container">
     <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-home toolbar"></span> Home</a>
+      <li>
+        <a class="toolbar-nav active" href="#homes"><span class="glyphicon glyphicon-home toolbar"></span> Home </a>
       </li>
       <li>
-        <a href="/tiles"><span class="glyphicon glyphicon-th-large toolbar"></span></a>
+        <a class="toolbar-nav" href="#tiles"><span class="glyphicon glyphicon-th-large toolbar"></span> Tiles </a>
       </li>
       <li>
-        <a href="/list"><span class="glyphicon glyphicon-th-list toolbar"></span></a>
+        <a class="toolbar-nav" href="#list"><span class="glyphicon glyphicon-th-list toolbar"></span> List </a>
       </li>
       <li>
-        <a href="/timers"><span class="glyphicon glyphicon-time toolbar"></span></a>
+        <a class="toolbar-nav" href="#timers"><span class="glyphicon glyphicon-time toolbar"></span> Timers </a>
       </li>
       <li>
-        <a href="/events"><span class="glyphicon glyphicon-dashboard toolbar"></span></a>
+        <a class="toolbar-nav" href="#events"><span class="glyphicon glyphicon-dashboard toolbar"></span> Events </a>
       </li>	
 		</ul>
   </div>
 </nav>
 
+
 <script>
-$(".nav .nav-link").on("click", function(){
+$(".toolbar-nav").on("click", function(){
    $(".nav").find(".active").removeClass("active");
    $(this).addClass("active");
+	 var a_href = $(this).attr('href');
+	 $(".mypage").hide();
+   $(a_href).show();
+	 if (a_href == "#tiles")	create_tiles();
+});
+	
+$( document ).ready(function() {
+
 });
 </script>
