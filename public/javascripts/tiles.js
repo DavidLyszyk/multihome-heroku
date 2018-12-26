@@ -74,11 +74,12 @@ function compute_layout() {
 	const max_width = 400;
 	const height1 = portrait ? 400 : 150;
 	const sec_width = 60;
-	const hmargin = 10;
+	const hmargin = 20;
+	const vmargin = 20;
 	const hsep1 = portrait ? 40 : 20;
 	const hsep2 = portrait ? 20 : 10;
-	const hpadding = 10;
-	const height2 = (height1 - hsep2 + hmargin*2)/2;
+	const hpadding = 0;
+	const height2 = (height1 - hsep2)/2;
 
 	const block_part_width = 2*hsep1 + sec_width + hsep2;
 	
@@ -107,7 +108,7 @@ function compute_layout() {
 		var device_details = $("#dev-details" + (index+1));
 		device_details.width(sec_width);
 		device_details.height(height2);
-		pleft = pleft + w2 + hsep2/2;
+		pleft = pleft + w2;
 		device_details.offset( { left: pleft, top: ptop} );
 		var device_timers = $("#dev-timers" + (index+1));
 		device_timers.width(sec_width);
@@ -116,7 +117,7 @@ function compute_layout() {
 		pleft = pleft + hsep1*3 + sec_width;
 		if ((index+1) % N2 == 0) {
 			pleft = hmargin;
-			ptop = ptop + hmargin*3 + height1;
+			ptop = ptop + hmargin*2 + height1 + vmargin;
 		}
 	});
 }
@@ -124,7 +125,15 @@ function compute_layout() {
 function onDeviceMouseMove(element, event) {
 	//alert(element.id);
 	event.preventDefault();
-	element.innerHTML = "mouse : " + event.offsetX + " ; " + event.offsetY;
+	element.innerHTML = event.offsetX + " ; " + event.offsetY;
+}
+
+function onDeviceMouseDown(element, event) {
+	event.preventDefault();
+}
+
+function onDeviceMouseUp(element, event) {
+	event.preventDefault();
 }
 
 
