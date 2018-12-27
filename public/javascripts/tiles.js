@@ -64,7 +64,7 @@ function compute_layout() {
 	var i;
 	var screen_width = 0, screen_height = 0;
 	for (i = 0; i < 10; i++) {
-		screen_width = $( window ).width()*0.95;
+		screen_width = $( window ).width()*0.98;
 		screen_height = $( window ).height()*0.95;
 	}
 	var portrait = (screen_width < screen_height);
@@ -72,12 +72,12 @@ function compute_layout() {
 	
 	const min_width = 200;
 	const max_width = 400;
-	const height1 = portrait ? 400 : 150;
+	const height1 = portrait ? 250 : 150;
 	const sec_width = 60;
 	const hmargin = 20;
 	const vmargin = 20;
-	const hsep1 = portrait ? 40 : 20;
-	const hsep2 = portrait ? 20 : 10;
+	const hsep1 = portrait ? 20 : 20;
+	const hsep2 = portrait ? 10 : 10;
 	const hpadding = 0;
 	const height2 = (height1 - hsep2)/2;
 
@@ -128,12 +128,37 @@ function onDeviceMouseMove(element, event) {
 	element.innerHTML = event.offsetX + " ; " + event.offsetY;
 }
 
-function onDeviceMouseDown(element, event) {
+function onDeviceMouseDown(element, event, name) {
 	event.preventDefault();
+	element.innerHTML = name + " : " + event.clientX + " ; " + event.clientY;
 }
 
-function onDeviceMouseUp(element, event) {
+function onDeviceMouseUp(element, event, name) {
 	event.preventDefault();
+	element.innerHTML = name + " : " + event.clientX + " ; " + event.clientY;
 }
 
+function onDeviceTouchStart(event) {
+	event.preventDefault();
+	var touch = event.targetTouches[0];
+	touch.target.innerHTML = "start : " + touch.clientX + " ; " + touch.clientY;	
+}
+
+function onDeviceTouchMove(event) {
+	event.preventDefault();
+	var touch = event.targetTouches[0];
+	touch.target.innerHTML = "move : " + touch.clientX + " ; " + touch.clientY;	
+}
+
+function onDeviceTouchEnd(event) {
+	event.preventDefault();
+	var touch = event.targetTouches[0];
+	event.target.innerHTML = "end : ";// + touch.clientX + " ; " + touch.clientY;	
+}
+
+function onDeviceTouchCancel(event) {
+	event.preventDefault();
+	var touch = event.targetTouches[0];
+	event.target.innerHTML = "cancel : ";// + touch.clientX + " ; " + touch.clientY;	
+}
 
