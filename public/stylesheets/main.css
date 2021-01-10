@@ -1,27 +1,104 @@
-.jumbotron {
-  background: #532F8C;
-  color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+html, body {
+		width: 100%;
+		height: 10%;
+		margin: 0;
+		padding: 0;
+}
+
+.toolbar {
+	padding: 10px;
+}
+.glyphicon-bitcoin {
+	color: transparent;
+}
+
+@media only screen and (min-width: 1301px) {
+    /* tablets and desktop */
+	.glyphicon {
+    font-size: 18px;
+	}
+	.toolbar-nav {
+		font-size: 20px;
+	}
+	.toolbar-title {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.alert {
+    font-size: 16px;
+		background: #b99;
+	}
+	.device {
+		font-size: 15x;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	  /* phones */
+	.glyphicon {
+    font-size: 35px;
+	}
+	.toolbar-nav {
+		font-size: 0px;
+	}
+	.toolbar-title {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.alert {
+    font-size: 20px;
+		background: #9a9;
+	}
+	.device {
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 1300px) and (orientation: portrait) {
+    /* portrait phones */
+	.glyphicon {
+    font-size: 50px;
+	}
+	.toolbar-nav {
+		font-size: 0px;
+	}
+	.toolbar-title {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.alert {
+    font-size: 40px;
+		background: #99a;
+	}
+	.device {
+		font-size: 30px;
+	}
+}
+
+.device {
+	border: 2px solid black;
+	border-radius: 5px;
+	background: #aab;
+	padding: 0px;
+	font-weight: bold;
+}
+
+.dev-details {
+	background: #aba;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.dev-timers {
+	background: #baa;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.gi-15x{font-size: 1.5em;}
+.gi-2x{font-size: 2em;}
+.gi-3x{font-size: 3em;}
+.gi-4x{font-size: 4em;}
+.gi-5x{font-size: 5em;}
+
 

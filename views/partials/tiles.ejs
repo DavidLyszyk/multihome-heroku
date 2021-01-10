@@ -1,0 +1,20 @@
+<div hidden class="container mypage" id="tiles">
+	<div id="container-devices-tiles"/>
+</div>
+
+<template id="device-template">
+	<button class="device" id="name"
+					onmousemove= "onDeviceMouseMove(this, event)"
+					onmousedown= "onDeviceMouseDown(this, event, 'onmousedown')"
+					onmouseup=   "onDeviceMouseUp(this, event, 'onmouseup')"
+					onmouseleave="onDeviceMouseUp(this, event, 'onmouseleave')"
+					ontouchstart="onDeviceTouchStart(event)"
+					ontouchmove= "onDeviceTouchMove(event)"
+					ontouchend=  "onDeviceTouchEnd(event)"
+					ontouchcancel=  "onDeviceTouchCancel(event)"
+					>
+		(name)
+	</button>
+	<button class="dev-details"><i class="glyphicon glyphicon-edit gi-2x"></i></button>
+	<button class="dev-timers"><i class="glyphicon glyphicon-time gi-2x"></i></button>
+</template>
